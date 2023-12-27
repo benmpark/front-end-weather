@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Weather Guesser</title>
+    <meta
+      name="description"
+      content="Provides weather forecast from National Weather Service"
+    />
+    <meta name="author" content="Benjamin Park" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div id="main-container">
+      <section id="titles">
+        <h1>Weather Guesser</h1>
+        <h4>
+          <em
+            >We pretend it's science, but really no one knows for
+            sure.&trade;</em
+          >
+        </h4>
+        <div class="image-container">
+          <img
+            src="images/weather-blow.jpg"
+            alt="Old weather art - cloud blowing wind"
+          />
+          <div class="circular-gradient"></div>
+        </div>
+      </section>
+      <section id="selection">
+        <form id="location-options">
+          <span id="location-options-label">Location options:</span><br />
+          <input
+            type="radio"
+            id="few"
+            name="how-many-cities"
+            value="few"
+            checked
+          />
+          <label for="few">20 cities across the US</label><br />
+          <input type="radio" id="many" name="how-many-cities" value="many" />
+          <label for="few">25 most populous US cities</label>
+        </form>
+        <form id="weather-form">
+          <label for="city">Select a Location:</label>
+          <select id="city" name="city" required>
+            <option value="">---choose here---</option>
+            <option value="Automatic">Automatic Location</option>
+            <option value="Custom">Manual Location</option>
+            <option value="Boston">Boston, MA</option>
+            <option value="Mt Washington">Mount Washington, NH</option>
+            <option value="New York">New York, NY</option>
+            <option value="Los Angeles">Los Angeles, CA</option>
+            <option value="Philadelphia">Philadelphia, PA</option>
+            <option value="Washington">Washington, DC</option>
+            <option value="Chicago">Chicago, IL</option>
+            <option value="Orlando">Orlando, FL</option>
+            <option value="San Francisco">San Francisco, CA</option>
+            <option value="St Louis">St. Louis, MO</option>
+            <option value="Denver">Denver, CO</option>
+            <option value="Dallas">Dallas, TX</option>
+            <option value="Phoenix">Phoenix, AZ</option>
+            <option value="Seattle">Seattle, WA</option>
+            <option value="New Orleans">New Orleans, LA</option>
+            <option value="Salt Lake City">Salt Lake City, UT</option>
+            <option value="Atlanta">Atlanta, GA</option>
+            <option value="Minneapolis">Minneapolis, MN</option>
+            <option value="Fairbanks">Fairbanks, AK</option>
+            <option value="Honolulu">Honolulu, HI</option>
+          </select>
+          <br />
+          <div class="sometimes-hide" id="hidden-part-of-form">
+            <label
+              class="sometimes-hide"
+              id="location-label"
+              for="user-location"
+              >Enter your own location:
+            </label>
+            <input
+              class="sometimes-hide"
+              type="text"
+              id="user-location"
+              name="location-box"
+            />
+            <br />
+          </div>
+          <button type="submit">Get Weather</button>
+        </form>
+      </section>
+      <section id="weather-info"></section>
+      <section id="alerts-info"></section>
+    </div>
+  </body>
+  <footer>
+    <p>&copy; Copyright 2023 Benjamin Park</p>
+  </footer>
+</html>
