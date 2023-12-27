@@ -1,4 +1,4 @@
-# dictionary-website
+# Weather Guesser
 A simple front-end website that makes API calls to the [National Weather Service](https://www.weather.gov) and returns the forecast and weather alert information.
 
 ## Overview
